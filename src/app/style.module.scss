@@ -1,0 +1,93 @@
+.main {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+		width: 100%;
+		max-width: 500px;
+
+		.addSection {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			gap: 24px;
+
+			.todoTextEntry {
+				flex-grow: 1;
+				border: 1px solid #0d38cb;
+				color: #1f1f1f;
+
+				&::placeholder {
+					color: #707070;
+				}
+			}
+			.addBtn {
+				width: max-content;
+				padding: 10px 32px;
+			}
+		}
+		.todoList {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			padding: 20px;
+			border-radius: 20px;
+
+			.todoItem {
+				display: flex;
+				gap: 16px;
+				border-bottom: 1px solid #707070;
+
+				.checkBox {
+					width: 32px;
+					height: 32px;
+					border-radius: 5px;
+					border: 1px solid #0d38cb;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					.icon {
+						width: 60%;
+						height: 60%;
+						display: none;
+						color: white;
+					}
+
+					&.active {
+						background-color: #7b99fd;
+
+						.icon {
+							display: block;
+						}
+					}
+
+				}
+				.todoText {
+					flex-grow: 1;
+					color: #1f1f1f;
+					font-size: 14px;
+					line-height: 32px;
+				}
+				.removeBtn {
+					width: 32px;
+					height: 32px;
+					padding: 4px 0;
+					color: #dc2b2b;
+					border-radius: 4px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					&:hover {
+						background-color: #c4c4c4;
+					}
+				}
+			}
+		}
+	}
+}
